@@ -1,0 +1,8 @@
+body{border:0; background:#ddd;}
+img{vertical-align:baseline;}
+select,button{display:inline-block;}
+
+.bold{font-weight:bold;}
+
+.container{width:900px; margin:0 auto; background:white; padding:20px;}
+.render{border:1px solid gray; backround:silver; margin:20px 0; padding:10px;}
