@@ -1,11 +1,8 @@
 RewriteEngine On
-RewriteCond %{REQUEST_FILENAME} !-f
-
-#RewriteRule ^del/cities/:([^./]+)/([^./]+)/:([^./]+)$ public/api.php?action=del&id=$1&$2=$3 [QSA,L]
-#RewriteRule ^post/cities/:([^./]+)/([^./]+)$ public/api.php?action=post&id=$1&type=$2 [QSA,L]
-#RewriteRule ^del/cities/:([^./]+)/([^./]+)$ public/api.php?action=del&id=$2&type=$3 [QSA,L]
-#RewriteRule ^del/cities/:([^./]+)$ public/api.php?action=del&id=$2 [QSA,L]
-#RewriteRule ^post/cities$ public/api.php?action=post&type=$1 [QSA,L]
-#RewriteRule ^get/cities$ public/api.php?action=get&type=$1 [QSA,L]
-
-RewriteRule ^(.*)$ public/index.php?g=$1 [QSA,L]
+#RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^del/cities/:([^./]+)/weather/:([^./]+)$ /?action=del_weather&city_id=$1&weather_id=$2 [L]
+RewriteRule ^post/cities/:([^./]+)/weather$ /?action=post_weather&city_id=$1 [L]
+RewriteRule ^get/cities/:([^./]+)/weather$ /?action=get_weather&city_id=$1 [L]
+RewriteRule ^del/cities/:([^./]+)$ /?action=del_city&city_id=$1 [L]
+RewriteRule ^post/cities$ /?action=post_city [L]
+RewriteRule ^get/cities$ /?action=get_cities [L]
